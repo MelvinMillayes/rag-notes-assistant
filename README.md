@@ -81,8 +81,14 @@ This project was my first hands-on Python work, coming from a C#/.NET background
 ## Example
 
 ```
-Your question: Is Python an object-oriented language?
+Your question: What are my notes about?
 
-Answer: Yes. Python supports multiple programming paradigms, with an
-emphasis on object-oriented programming alongside dynamic typing.
+Answer:  Based on the context, it appears that the topic of your notes is not explicitly stated, but the text mentions the following related topics:
+
+- Python programming
+- Computer science
+- Programming courses
+- Curriculum for introductory computer science courses
+- Python Enhancement Proposals
+- Python style guide (PEP 8)
 ```

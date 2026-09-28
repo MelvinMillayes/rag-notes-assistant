@@ -9,10 +9,10 @@ def ask(question):
 
     prompt = f"""Using only the context below, answer the question. If the context doesn't contain the answer, say so.
 
-Context:
-{context}
+        Context:
+        {context}
 
-Question: {question}"""
+        Question: {question}"""
 
     response = ollama.chat(model="llama3.2", messages=[
         {"role": "user", "content": prompt}
@@ -24,3 +24,6 @@ if __name__ == "__main__":
     question = "Is python an object oriented language?"
     answer = ask(question)
     print(answer)
+
+
+
