@@ -4,8 +4,8 @@ from embed import get_embedding
 client = chromadb.PersistentClient(path="chroma_db")
 collection = client.get_or_create_collection("notes")
 
-def retrieve(question, n_results=3):
-    question_embedding = get_embedding(question)
+def retrieve(query, n_results=3):
+    question_embedding = get_embedding(query)
     results = collection.query(
         query_embeddings=[question_embedding],
         n_results=n_results
@@ -13,8 +13,8 @@ def retrieve(question, n_results=3):
     return results
 
 if __name__ == "__main__":
-    question = "Is python an object oriented language?"
-    results = retrieve(question)
+    query = "Is python an object oriented language?"
+    results = retrieve(query)
 
     for doc, meta, dist in zip(
         results["documents"][0],
