@@ -39,6 +39,7 @@ def call_model(state: MessagesState):
         print(f"  [{role}] {str(content)[:80]}")
 
     response = llm.invoke(messages)
+    response.tool_calls = strip_write_when_searching(response.tool_calls)
 
     print(f"  → model responded. tool_calls: {response.tool_calls}")
     print(f"  → content: {response.content[:200]!r}")
