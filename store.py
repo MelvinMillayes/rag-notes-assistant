@@ -1,5 +1,5 @@
 import chromadb
-from chunk import chunk_text
+from chunking import chunk_text
 from embed import get_embeddings
 
 client = chromadb.PersistentClient(path="chroma_db")
