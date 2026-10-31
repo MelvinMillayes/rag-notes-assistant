@@ -1,5 +1,3 @@
-from generate import ask
-from agent import app
 from agent import app, SYSTEM_PROMPT
 
 def main():
